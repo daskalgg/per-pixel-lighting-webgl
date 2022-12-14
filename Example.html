@@ -43,7 +43,7 @@
 
            vec3 normal = uNMatrix * aVertexNormal;
 
-           float directionLight = max(dot(normal, uLightingDirection), 0.);
+           float directionLight = max(dot(normal, -uLightingDirection), 0.);
            vLightWeighting = directionLight * uDirectionalColor;
 
            vTextureCoord = aTextureCoord;
